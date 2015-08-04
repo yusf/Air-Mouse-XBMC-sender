@@ -1,5 +1,5 @@
-Air-Mouse-XBMC-sender
-=====================
+Air Mouse for Kodi
+==================
 
 I am using this cheap air mouse I got from DX:
 
