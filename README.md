@@ -25,7 +25,7 @@ Since XBMC uses the EVIOCGRAB operation, it is impossible to read the files afte
 
 If you want to use this (instructions are for OSMC on the Raspberry Pi):
 
-1.  Take script.py and KodiClient.py and put them in a directory (I used ```/home/osmc/kodi-airmouse-0c45-2702/```)
+1.  Take script.py and XBMCClient.py and put them in a directory (I used ```/home/osmc/kodi-airmouse-0c45-2702/```)
 
 2.  Have the script to run at boot: ```sudo nano /etc/rc.local```
 
