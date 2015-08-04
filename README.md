@@ -7,15 +7,15 @@ I am using this cheap air mouse I got from DX:
 
 "2.4GHz Motion Sensing Air Mouse + Remote Control - Black". 
 
-Anyone with this mouse and XBMC will agree that using it is very annoying, especially if you want to use it as a remote and disable the gyro mouse feature.
+Anyone with this mouse and Kodi will agree that using it is very annoying, especially if you want to use it as a remote and disable the gyro mouse feature.
 
 This is a script I wrote to fix the annoyances. 
-It reads key presses from this air mouse, and sends them to XBMC through EventServer.
+It reads key presses from this air mouse, and sends them to Kodi through EventServer.
 It works on a Raspberry Pi with OpenElec (will probably also work on Xbian and Raspbmc).
-The script reads all the button presses, and sends them to XBMC on the same machine, and it does not care if the mouse is in 'mouse' mode, or in 'mouse disabled' mode.
+The script reads all the button presses, and sends them to Kodi on the same machine, and it does not care if the mouse is in 'mouse' mode, or in 'mouse disabled' mode.
 It only respond to key presses, and ignores all mouse events, so that the device will only work as a remote and not as a mouse.
 
-The script XBMCClient.py is taken from the XBMC repo:
+The script XBMCClient.py is taken from the Kodi repo:
 https://github.com/xbmc/xbmc/blob/master/tools/EventClients/lib/python/xbmcclient.py
 
 The script reads the input from "/dev/input/" and searches the files that start with
@@ -25,7 +25,7 @@ Since XBMC uses the EVIOCGRAB operation, it is impossible to read the files afte
 
 If you want to use this (instructions are for OSMC on the Raspberry Pi):
 
-1.  Take script.py and XBMCClient.py and put them in a directory (I used /home/osmc/AirMouseScript/)
+1.  Take script.py and KodiClient.py and put them in a directory (I used /home/osmc/AirMouseScript/)
 
 2.  Have the script to run at boot: ```sudo nano /etc/rc.local```
 
