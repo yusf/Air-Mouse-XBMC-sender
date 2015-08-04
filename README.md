@@ -1,10 +1,11 @@
 Air-Mouse-XBMC-sender
 =====================
 
-I am using this cheap air mouse I got from eBay:
+I am using this cheap air mouse I got from DX:
 
+![sku_382619_2](https://cloud.githubusercontent.com/assets/346211/9074842/4ab1ba32-3b0e-11e5-96f4-df719802ca3b.jpg)
 
-"Black 2.4GHz Wireless Fly Air Mouse Android Remote Control 3D Motion Stick" (also sold under the name "T2"). 
+"2.4GHz Motion Sensing Air Mouse + Remote Control - Black". 
 
 Anyone with this mouse and XBMC will agree that using it is very annoying, especially if you want to use it as a remote and disable the gyro mouse feature.
 
@@ -18,16 +19,20 @@ The script XBMCClient.py is taken from the XBMC repo:
 https://github.com/xbmc/xbmc/blob/master/tools/EventClients/lib/python/xbmcclient.py
 
 The script reads the input from "/dev/input/" and searches the files that start with
-"usb-EXCEL_EXCELDIGI_Wireless_Device-".
+"usb-2.4G_2.4G_Wireless_Device-".
 
-Since XBMC uses the EVIOCGRAB operation, it is impossible to read the files after XBMC has launched, so in order to fix that, the script is called from autostart.sh, and it also uses EVIOCGRAB, to prevent XBMC from accessing the device files.
+Since XBMC uses the EVIOCGRAB operation, it is impossible to read the files after XBMC has launched, so in order to fix that, the script is called from ```rc.local```, and it also uses EVIOCGRAB, to prevent XBMC from accessing the device files.
 
-If you want to use this (instructions are for OpenElec on the Raspberry Pi):
+If you want to use this (instructions are for OSMC on the Raspberry Pi):
 
-1.	Create an autostart.sh file as shown here: http://wiki.openelec.tv/index.php?title=Autostart.sh
+1.  Take script.py and XBMCClient.py and put them in a directory (I used /home/osmc/AirMouseScript/)
 
-2.	Take script.py and XBMCClient.py and put them in a directory (I used /storage/AirMouseScript/)
+2.  Have the script to run at boot: ```sudo nano /etc/rc.local```
 
-3.	Change autostart.sh to run script.py (like in the provided autostart.sh), and don't forget the '&' in the end of the command.
+3.  On a line just above ```exit 0```, enter ```python /home/osmc/AirMouseScript/script.py &```
 
-4.	Put airmouse.xml in /storage/.kodi/userdata/keymaps or /storage/.xbmc/userdata/keymaps, depending on your OpenElec Version.
+4.  ```chmod +x /home/osmc/AirMouseScript/script.py```
+
+5.  Put airmouse.xml in ```/home/osmc/.kodi/userdata/keymaps```.
+
+6.  Reboot
