@@ -31,7 +31,7 @@ If you want to use this (instructions are for OSMC on the Raspberry Pi):
 
 3.  On a line just above ```exit 0```, enter ```python /home/osmc/kodi-airmouse-0c45-2702/script.py &```
 
-4.  ```chmod +x /home/osmc/AirMouseScript/script.py```
+4.  ```chmod +x /home/osmc/kodi-airmouse-0c45-2702/script.py```
 
 5.  Put airmouse.xml in ```/home/osmc/.kodi/userdata/keymaps```.
 
