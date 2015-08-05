@@ -6,6 +6,8 @@ I am using this cheap air mouse I got from DX:
 ![sku_382619_2](https://cloud.githubusercontent.com/assets/346211/9074842/4ab1ba32-3b0e-11e5-96f4-df719802ca3b.jpg)
 
 "2.4GHz Motion Sensing Air Mouse + Remote Control - Black". 
+Vendor ID: 0c45
+Product ID: 2702
 
 Anyone with this mouse and Kodi will agree that using it is very annoying, especially if you want to use it as a remote and disable the gyro mouse feature.
 
