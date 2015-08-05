@@ -18,7 +18,7 @@ keyMap = {
 	116:"power"
 };
 done = False;
-input_files = [ "/dev/input/by-id/" + f for f in os.listdir("/dev/input/by-id/") if f.startswith("usb-EXCEL_EXCELDIGI_Wireless_Device-") ]
+input_files = [ "/dev/input/by-id/" + f for f in os.listdir("/dev/input/by-id/") if f.startswith("usb-2.4G_2.4G_Wireless_Device-") ]
 
 class CommunicationThread(threading.Thread):
 	def __init__(self):
